@@ -36,7 +36,7 @@ public class AppTestIT
     }
 
     @Test
-    public void my_test_1(){
+    public void addStudentTest(){
         Validator<Student> studentValidator = new StudentValidator();
         Validator<Tema> temaValidator = new TemaValidator();
         Validator<Nota> notaValidator = new NotaValidator();
@@ -45,12 +45,12 @@ public class AppTestIT
         rep3 = new TemaXMLRepository(temaValidator, "teme.xml");
         rep2 = new NotaXMLRepository(notaValidator, "note.xml");
         srv = new Service(rep1, rep3, rep2);
-        boolean result = srv.saveTema("357","asd",265, 7);
-        assertEquals(false, result);//deadline invalid
+        boolean result = srv.saveStudent(298,"asd",916);
+        assertEquals(true, result);
     }
 
     @Test
-    public void my_test_2(){
+    public void addAssignmentTest(){
         Validator<Student> studentValidator = new StudentValidator();
         Validator<Tema> temaValidator = new TemaValidator();
         Validator<Nota> notaValidator = new NotaValidator();
@@ -59,7 +59,24 @@ public class AppTestIT
         rep3 = new TemaXMLRepository(temaValidator, "teme.xml");
         rep2 = new NotaXMLRepository(notaValidator, "note.xml");
         srv = new Service(rep1, rep3, rep2);
+        addStudentTest();
         boolean result = srv.saveTema("123","asd",10, 7);
         assertEquals(true, result);}
 
+
+    @Test
+    public void addGradeTest(){
+        Validator<Student> studentValidator = new StudentValidator();
+        Validator<Tema> temaValidator = new TemaValidator();
+        Validator<Nota> notaValidator = new NotaValidator();
+
+        rep1 = new StudentXMLRepository(studentValidator, "studenti.xml");
+        rep3 = new TemaXMLRepository(temaValidator, "teme.xml");
+        rep2 = new NotaXMLRepository(notaValidator, "note.xml");
+        srv = new Service(rep1, rep3, rep2);
+        addStudentTest();
+        addAssignmentTest();
+        int result = srv.saveNota(298,"123",10, 7,"good");
+        assertEquals(1, result);
+    }
 }
