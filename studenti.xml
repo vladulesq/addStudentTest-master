@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entitati>
+    <student ID="400">
+        <Nume>asd</Nume>
+        <Grupa>936</Grupa>
+    </student>
+    <student ID="416">
+        <Nume>asd</Nume>
+        <Grupa>111</Grupa>
+    </student>
+    <student ID="401">
+        <Nume>asd</Nume>
+        <Grupa>936</Grupa>
+    </student>
+    <student ID="1123">
+        <Nume>valid in pula mea</Nume>
+        <Grupa>935</Grupa>
+    </student>
+    <student ID="68">
+        <Nume>Dave</Nume>
+        <Grupa>936</Grupa>
+    </student>
+    <student ID="69">
+        <Nume>Dave Da Brave</Nume>
+        <Grupa>936</Grupa>
+    </student>
+    <student ID="40">
+        <Nume>asd</Nume>
+        <Grupa>936</Grupa>
+    </student>
+    <student ID="25">
+        <Nume>asd</Nume>
+        <Grupa>935</Grupa>
+    </student>
+    <student ID="415">
+        <Nume>asd</Nume>
+        <Grupa>936</Grupa>
+    </student>
+</Entitati>
